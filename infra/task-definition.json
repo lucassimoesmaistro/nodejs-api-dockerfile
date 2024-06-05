@@ -1,0 +1,21 @@
+{
+    "family": "task-definition-hello-world",
+    "networkMode": "awsvpc",
+    "executionRoleArn": "arn:aws:iam::058264372169:role/ECSTaskExecutionRole",
+    "containerDefinitions": [
+      {
+        "name": "hello-world",
+        "image": "lucassimoesmaistro491/teste:latest",
+        "portMappings": [
+          {
+            "containerPort": 3000,
+            "hostPort": 3000
+          }
+        ]
+      }
+    ],
+    "requiresCompatibilities": ["FARGATE"],
+    "cpu": "256",
+    "memory": "512"
+  }
+  
